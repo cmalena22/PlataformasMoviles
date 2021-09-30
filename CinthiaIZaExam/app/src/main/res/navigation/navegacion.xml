@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navegacion"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.examen_cinthiaiza.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_inicioFragment3"
+            app:destination="@id/inicioFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_registroFragment"
+            app:destination="@id/registroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acercadeFragment2"
+        android:name="com.example.examen_cinthiaiza.acercadeFragment"
+        android:label="fragment_acercade"
+        tools:layout="@layout/fragment_acercade" />
+    <fragment
+        android:id="@+id/agendaFragment2"
+        android:name="com.example.examen_cinthiaiza.agendaFragment"
+        android:label="fragment_agenda"
+        tools:layout="@layout/fragment_agenda" />
+    <fragment
+        android:id="@+id/registroFragment"
+        android:name="com.example.examen_cinthiaiza.RegistroFragment"
+        android:label="fragment_registro"
+        tools:layout="@layout/fragment_registro" >
+        <action
+            android:id="@+id/action_registroFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.examen_cinthiaiza.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <argument
+            android:name="usuario"
+            app:argType="string" />
+        <argument
+            android:name="contra"
+            app:argType="string" />
+    </fragment>
+</navigation>
