@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/inicioFragment">
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.formulario.inicioFragment"
+        android:label="inicioFragment" >
+        <action
+            android:id="@+id/action_inicioFragment_to_hojaVidaFragment"
+            app:destination="@id/hojaVidaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/hojaVidaFragment"
+        android:name="com.example.formulario.hojaVidaFragment"
+        android:label="hojaVidaFragment" >
+        <action
+            android:id="@+id/action_hojaVidaFragment_to_experienciaLaboralFragment"
+            app:destination="@id/experienciaLaboralFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/experienciaLaboralFragment"
+        android:name="com.example.formulario.experienciaLaboralFragment"
+        android:label="experienciaLaboralFragment" >
+        <action
+            android:id="@+id/action_experienciaLaboralFragment_to_datosProfesionalesFragment2"
+            app:destination="@id/datosProfesionalesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/datosAcademicosFragment"
+        android:name="com.example.formulario.datosAcademicosFragment"
+        android:label="datosAcademicosFragment" >
+        <action
+            android:id="@+id/action_datosAcademicosFragment_to_finalFragment"
+            app:destination="@id/finalFragment" />
+        <argument
+            android:name="persona"
+            app:argType="com.example.formulario.Persona" />
+    </fragment>
+    <fragment
+        android:id="@+id/datosProfesionalesFragment2"
+        android:name="com.example.formulario.datosProfesionalesFragment"
+        android:label="datosProfesionalesFragment" >
+        <action
+            android:id="@+id/action_datosProfesionalesFragment2_to_datosAcademicosFragment"
+            app:destination="@id/datosAcademicosFragment" />
+        <argument
+            android:name="persona"
+            app:argType="com.example.formulario.Persona" />
+    </fragment>
+    <fragment
+        android:id="@+id/finalFragment"
+        android:name="com.example.formulario.FinalFragment"
+        android:label="fragment_final"
+        tools:layout="@layout/fragment_final" >
+        <argument
+            android:name="persona"
+            app:argType="com.example.formulario.Persona" />
+    </fragment>
+    <fragment
+        android:id="@+id/acercaFragment2"
+        android:name="com.example.formulario.acercaFragment"
+        android:label="fragment_acerca"
+        tools:layout="@layout/fragment_acerca" />
+    <fragment
+        android:id="@+id/beneficiosFragment"
+        android:name="com.example.formulario.beneficiosFragment"
+        android:label="fragment_beneficios"
+        tools:layout="@layout/fragment_beneficios" />
+    <fragment
+        android:id="@+id/conocenosFragment"
+        android:name="com.example.formulario.conocenosFragment"
+        android:label="fragment_conocenos"
+        tools:layout="@layout/fragment_conocenos" />
+    <fragment
+        android:id="@+id/contactosFragment"
+        android:name="com.example.formulario.contactosFragment"
+        android:label="fragment_contactos"
+        tools:layout="@layout/fragment_contactos" />
+</navigation>

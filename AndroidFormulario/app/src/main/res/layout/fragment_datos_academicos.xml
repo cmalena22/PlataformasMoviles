@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable  name="persona"
+        type="com.example.formulario.Persona"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".datosAcademicosFragment">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Ingrese Datos academicos" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:text="Ingrese nombre Secundaria" />
+
+        <EditText
+            android:id="@+id/NomSecu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="EScuela"
+            android:inputType="textPersonName"
+            android:text="@{persona.escuela}" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Colegio" />
+
+        <EditText
+            android:id="@+id/NomCole"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Colegio"
+            android:inputType="textPersonName"
+            android:text="@{persona.colegio}" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Universidad" />
+        <EditText
+            android:id="@+id/NombreUni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Universidad"
+            android:inputType="textPersonName"
+            android:text="@{persona.universidad}" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fecha graduacion" />
+
+        <EditText
+            android:id="@+id/Gradu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Fecha graduacion"
+            android:inputType="textPersonName"
+            android:text="@{persona.fecha}" />
+        <Button
+            android:id="@+id/btn_continuarDA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Visualizar" />
+
+
+
+    </LinearLayout>
+</layout>

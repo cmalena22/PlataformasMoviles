@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/drawer_layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        tools:context=".MainActivity"
+
+        >
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/navigationFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/navigation"/>
+
+
+
+        <!--
+                <TextView
+                    android:id="@+id/txt_nombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="@{persona.nombre}" />
+
+                <TextView
+                    android:id="@+id/txt_numero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{numero}" />
+
+                <ImageView
+                    android:id="@+id/dado"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/dice_1" />
+
+
+                <Button
+                    android:id="@+id/button_lanzar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+
+                    android:text="lanzar" />
+        -->
+
+    </LinearLayout>
+        <com.google.android.material.navigation.NavigationView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/nav_view"
+            app:menu="@menu/drawer_menu"
+            android:layout_gravity = "start"/>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</layout>
