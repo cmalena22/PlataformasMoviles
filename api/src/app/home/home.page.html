@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Api web
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  
+  <div id="container">
+   
+
+      <ion-list>
+        <ion-list-header>
+          Lista de Movies
+        </ion-list-header>
+
+        
+        <ion-item *ngFor="let dato of datos ">
+          <ion-avatar slot="start">
+            <ion-icon name="{{dato.picture.medium}}"></ion-icon>
+          </ion-avatar>
+          
+          <ion-card>
+            <ion-card-content>
+              <ion-card-subtitle>Email:{{dato.email}}</ion-card-subtitle>
+              <ion-card-title>Autor : {{dato.name.title + " " + dato.name.first}}</ion-card-title>
+            <p>
+              Keep close to Nature's heart... and break clear away, once in awhile,
+              and climb a mountain or spend a week in the woods. Wash your spirit clean.
+            <br>  Genero:{{dato.gender}}
+              
+              <ion-img src="{{dato.picture.thumbnail}}"  height='60' width='120'></ion-img>
+        
+            </p>
+                 </ion-card-content>
+          </ion-card>
+         
+        </ion-item>
+       
+      </ion-list>
+    
+    
+      
+  </div>
+</ion-content>
+''

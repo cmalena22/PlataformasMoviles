@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>direcciones</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>{{ title }}</h1>
+  <div>
+
+    <h3>Registre</h3>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="persona.nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Correo</ion-label>
+      <ion-input [(ngModel)]="persona.correo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Mensaje</ion-label>
+      <ion-textarea placeholder="Enter more information here..." [(ngModel)]="persona.mensaje"></ion-textarea>
+    </ion-item>
+  
+  
+  
+  
+
+  </div>
+
+  <!-- this creates a google map on the page with the given lat/lng from -->
+  <!-- the component as the initial center of the map: -->
+  <div>
+
+ 
+  <agm-map [latitude]="lat" [longitude]="lng" (centerChange)="setNewLocation($event)">
+   
+  
+    <agm-marker [latitude]="current.latitude" [longitude]="current.longitude" [iconUrl]="'https://cdn4.iconfinder.com/data/icons/essential-app-2/16/botton-on-launch-point-48.png'">
+      <agm-info-window>{{current.address}}</agm-info-window>
+  
+    </agm-marker>
+    <agm-marker [latitude]="newLocation.latitude" [longitude]="newLocation.longitude" [iconUrl]="'https://cdn1.iconfinder.com/data/icons/Map-Markers-Icons-Demo-PNG/48/Map-Marker-Ball-Azure.png'" >
+      <agm-info-window>{{newLocation.address}}</agm-info-window>
+  
+    </agm-marker>
+  
+  
+  
+  
+
+  
+  </agm-map>
+  
+  {{newLocation | json}}
+</div>
+
+<div>
+  <ion-item>
+    <ion-button color="dark" (click)="guardar(newLocation)">Enviar</ion-button>
+  </ion-item>
+</div>
+</ion-content>

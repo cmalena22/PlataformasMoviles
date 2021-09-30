@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Camara</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+<div>
+
+
+  <h3>Registre Ropa</h3>
+  <ion-item>
+    <ion-label position="floating">Modelo</ion-label>
+    <ion-input [(ngModel)]="ropa.modelo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Marca</ion-label>
+    <ion-input [(ngModel)]="ropa.marca"></ion-input>
+  </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input [(ngModel)]="ropa.precio"></ion-input>
+    </ion-item>
+    <ion-item>
+    <ion-label position="floating">Origen</ion-label>
+    <ion-input [(ngModel)]="ropa.origen"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Diseniado</ion-label>
+    <ion-input [(ngModel)]="ropa.diseniador"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Foto</ion-label>
+    <ion-input [(ngModel)]="ropa.foto"></ion-input>
+  </ion-item>
+
+
+</div>
+
+<app-take-photo source="photo" (imageSelected)="imageSeleccionada($event)"
+ (uploadFinished)="uploadFinished($event)"></app-take-photo>
+<app-take-photo [source]="'photo'"></app-take-photo>
+<ion-item>
+<ion-button (click)="tomarFoto()"> Fotografia</ion-button>
+
+
+<ion-card>
+  Foto 2
+  <ion-img [src]="imgData"></ion-img>
+  <ion-img [src]="persona.image?.url"></ion-img>
+
+</ion-card>
+
+
+</ion-item>
+</ion-content>
